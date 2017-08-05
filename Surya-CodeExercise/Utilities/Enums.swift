@@ -6,4 +6,7 @@
 //  Copyright © 2017 Mayur. All rights reserved.
 //
 
-import Foundation
+
+enum CodeExerciseStoryboards: String {
+    case main = "Main"
+}

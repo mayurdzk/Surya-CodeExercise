@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		588E3048A4FD534043FD51D8 /* Pods_Surya_CodeExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBC3EC761B22BE5CE6A89DD /* Pods_Surya_CodeExercise.framework */; };
 		772E93871F35B75100EFA7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E93861F35B75100EFA7C6 /* AppDelegate.swift */; };
-		772E93891F35B75100EFA7C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E93881F35B75100EFA7C6 /* ViewController.swift */; };
+		772E93891F35B75100EFA7C6 /* EmailInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E93881F35B75100EFA7C6 /* EmailInputVC.swift */; };
 		772E938C1F35B75100EFA7C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 772E938A1F35B75100EFA7C6 /* Main.storyboard */; };
 		772E938E1F35B75100EFA7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 772E938D1F35B75100EFA7C6 /* Assets.xcassets */; };
 		772E93911F35B75100EFA7C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 772E938F1F35B75100EFA7C6 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,8 @@
 		77C070DF1F35BFFF00B53EDF /* UtilityMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C070DE1F35BFFF00B53EDF /* UtilityMethods.swift */; };
 		77C070E21F35CE7A00B53EDF /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C070E11F35CE7A00B53EDF /* Protocols.swift */; };
 		77C070E41F35CE8100B53EDF /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C070E31F35CE8100B53EDF /* Enums.swift */; };
+		77C070E71F35D25C00B53EDF /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C070E61F35D25C00B53EDF /* ItemTableViewCell.swift */; };
+		77C070E91F35D35400B53EDF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C070E81F35D35400B53EDF /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +26,7 @@
 		5DBC3EC761B22BE5CE6A89DD /* Pods_Surya_CodeExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Surya_CodeExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		772E93831F35B75100EFA7C6 /* Surya-CodeExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Surya-CodeExercise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		772E93861F35B75100EFA7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		772E93881F35B75100EFA7C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		772E93881F35B75100EFA7C6 /* EmailInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailInputVC.swift; sourceTree = "<group>"; };
 		772E938B1F35B75100EFA7C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		772E938D1F35B75100EFA7C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		772E93901F35B75100EFA7C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,6 +35,8 @@
 		77C070DE1F35BFFF00B53EDF /* UtilityMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityMethods.swift; sourceTree = "<group>"; };
 		77C070E11F35CE7A00B53EDF /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		77C070E31F35CE8100B53EDF /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		77C070E61F35D25C00B53EDF /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		77C070E81F35D35400B53EDF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DC7039B7C0306C88BC9AE61C /* Pods-Surya-CodeExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surya-CodeExercise.release.xcconfig"; path = "Pods/Target Support Files/Pods-Surya-CodeExercise/Pods-Surya-CodeExercise.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,13 +82,14 @@
 		772E93851F35B75100EFA7C6 /* Surya-CodeExercise */ = {
 			isa = PBXGroup;
 			children = (
+				77C070E51F35D23F00B53EDF /* CustomViews */,
 				77C070E01F35CE6300B53EDF /* Utilities */,
 				77C070DB1F35BCF800B53EDF /* ViewControllers */,
 				77C070DA1F35BCD400B53EDF /* Managers */,
 				77C070D91F35BCB900B53EDF /* Networking */,
 				77C070D81F35BCA900B53EDF /* Model Objects */,
 				772E93861F35B75100EFA7C6 /* AppDelegate.swift */,
-				772E93881F35B75100EFA7C6 /* ViewController.swift */,
+				772E93881F35B75100EFA7C6 /* EmailInputVC.swift */,
 				772E938A1F35B75100EFA7C6 /* Main.storyboard */,
 				772E938D1F35B75100EFA7C6 /* Assets.xcassets */,
 				772E938F1F35B75100EFA7C6 /* LaunchScreen.storyboard */,
@@ -128,8 +133,17 @@
 				77C070DE1F35BFFF00B53EDF /* UtilityMethods.swift */,
 				77C070E11F35CE7A00B53EDF /* Protocols.swift */,
 				77C070E31F35CE8100B53EDF /* Enums.swift */,
+				77C070E81F35D35400B53EDF /* Extensions.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		77C070E51F35D23F00B53EDF /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				77C070E61F35D25C00B53EDF /* ItemTableViewCell.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		BA1EBA650CF417830C7D6F57 /* Frameworks */ = {
@@ -278,9 +292,11 @@
 			files = (
 				77C070E21F35CE7A00B53EDF /* Protocols.swift in Sources */,
 				77C070DD1F35BD3900B53EDF /* ItemModel.swift in Sources */,
-				772E93891F35B75100EFA7C6 /* ViewController.swift in Sources */,
+				772E93891F35B75100EFA7C6 /* EmailInputVC.swift in Sources */,
+				77C070E91F35D35400B53EDF /* Extensions.swift in Sources */,
 				772E93871F35B75100EFA7C6 /* AppDelegate.swift in Sources */,
 				77C070E41F35CE8100B53EDF /* Enums.swift in Sources */,
+				77C070E71F35D25C00B53EDF /* ItemTableViewCell.swift in Sources */,
 				77C070DF1F35BFFF00B53EDF /* UtilityMethods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
