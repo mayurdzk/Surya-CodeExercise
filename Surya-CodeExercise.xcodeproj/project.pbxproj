@@ -19,6 +19,8 @@
 		77C070E41F35CE8100B53EDF /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C070E31F35CE8100B53EDF /* Enums.swift */; };
 		77C070E71F35D25C00B53EDF /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C070E61F35D25C00B53EDF /* ItemTableViewCell.swift */; };
 		77C070E91F35D35400B53EDF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C070E81F35D35400B53EDF /* Extensions.swift */; };
+		77C070EB1F35D87100B53EDF /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C070EA1F35D87100B53EDF /* ModelManager.swift */; };
+		77C070ED1F35D87D00B53EDF /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C070EC1F35D87D00B53EDF /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		77C070E31F35CE8100B53EDF /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		77C070E61F35D25C00B53EDF /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		77C070E81F35D35400B53EDF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		77C070EA1F35D87100B53EDF /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		77C070EC1F35D87D00B53EDF /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		DC7039B7C0306C88BC9AE61C /* Pods-Surya-CodeExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surya-CodeExercise.release.xcconfig"; path = "Pods/Target Support Files/Pods-Surya-CodeExercise/Pods-Surya-CodeExercise.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +120,8 @@
 		77C070DA1F35BCD400B53EDF /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				77C070EA1F35D87100B53EDF /* ModelManager.swift */,
+				77C070EC1F35D87D00B53EDF /* NetworkingManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -293,8 +299,10 @@
 				77C070E21F35CE7A00B53EDF /* Protocols.swift in Sources */,
 				77C070DD1F35BD3900B53EDF /* ItemModel.swift in Sources */,
 				772E93891F35B75100EFA7C6 /* EmailInputVC.swift in Sources */,
+				77C070ED1F35D87D00B53EDF /* NetworkingManager.swift in Sources */,
 				77C070E91F35D35400B53EDF /* Extensions.swift in Sources */,
 				772E93871F35B75100EFA7C6 /* AppDelegate.swift in Sources */,
+				77C070EB1F35D87100B53EDF /* ModelManager.swift in Sources */,
 				77C070E41F35CE8100B53EDF /* Enums.swift in Sources */,
 				77C070E71F35D25C00B53EDF /* ItemTableViewCell.swift in Sources */,
 				77C070DF1F35BFFF00B53EDF /* UtilityMethods.swift in Sources */,
