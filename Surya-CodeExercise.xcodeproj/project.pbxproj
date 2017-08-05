@@ -95,7 +95,6 @@
 				77C070D91F35BCB900B53EDF /* Networking */,
 				77C070D81F35BCA900B53EDF /* Model Objects */,
 				772E93861F35B75100EFA7C6 /* AppDelegate.swift */,
-				772E93881F35B75100EFA7C6 /* EmailInputVC.swift */,
 				772E938A1F35B75100EFA7C6 /* Main.storyboard */,
 				772E938D1F35B75100EFA7C6 /* Assets.xcassets */,
 				772E938F1F35B75100EFA7C6 /* LaunchScreen.storyboard */,
@@ -131,6 +130,7 @@
 		77C070DB1F35BCF800B53EDF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				772E93881F35B75100EFA7C6 /* EmailInputVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
