@@ -18,6 +18,8 @@ struct ModelManager {
     
     /// Call this method with an array of items to have them stored to the disk. Any existing items (matched by their emailID) will be over-written.
     /// This method returns a Bool indicating whether the write was successfull or not.
+    ///
+    /// WARNING: save(items:) is not thread safe. Objects to be saved with this method must be created and saved on the same thread.
     @discardableResult func save(items: [Item]) -> Bool {
         guard isDataStoreAvailable else {
             crashDebug(with: "The Data Store is unavailable")
