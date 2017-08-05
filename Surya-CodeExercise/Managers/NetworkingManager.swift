@@ -10,6 +10,8 @@ import SwiftyJSON
 import Foundation
 import SystemConfiguration
 
+//MARK: -
+//MARK: NetworkingManager
 struct NetworkingManager{
     internal let baseURL = "http://surya-interview.appspot.com/"
     
@@ -37,14 +39,21 @@ struct NetworkingManager{
                             items.append(item)
                         }
                     }
-                    ModelManager().save(items: items)
-                    completionHandler(.success)
+                    
+                    let success = ModelManager().save(items: items)
+                    if success {
+                        completionHandler(.success)
+                    } else {
+                        completionHandler(.failure(.other))
+                    }
                 }
             case .failure(_):
                 completionHandler(response.wasSuccess)
             }
         }
     }
+    
+    //Reviewer's Notes: This abstraction is created so that our dependency on Alamofire reduces. This is the bulk of the code where Alamofire will ever be referenced. This abstraction also makes it easier for enabling dependency injection and writing test for the code.
     
     internal func networkCall(to urlAsString: String, ofType type: HTTPRequestType, result: @escaping ((JSONResponse) -> Void )) {
         guard Reachability.isConnectedToNetwork else {
@@ -62,12 +71,17 @@ struct NetworkingManager{
     }
 }
 
+//MARK: -
+//MARK: JSONResponse Definition
 extension NetworkingManager {
     internal struct JSONResponse {
         var jsonResult: JSON?
         var wasSuccess: ResultType
         
-        //FIXME: Doccumentation
+        
+        /// Initialises a JSONResponse from Alamofire's DataResponse type. If a valid JSON object is not found, wasSuccess property is set to failure.
+        ///
+        /// - Parameter dataResponse:
         init(from dataResponse: DataResponse<Any>) {
             jsonResult = JSON(dataResponse)
             if let _ = jsonResult?.isEmpty {
@@ -78,7 +92,10 @@ extension NetworkingManager {
             }
         }
         
-        //FIXME: Doccumentation
+        
+        /// Call this initialiser when you want a JSONResponse object for a failed workflow. The jsonResult becomes nil and wasSuccess is set to .failure with the failure reason you provide.
+        ///
+        /// - Parameter failureReason: <#failureReason description#>
         init(withFailureReason failureReason: NetworkCallFailureReasons) {
             jsonResult = nil
             wasSuccess = .failure(failureReason)
@@ -86,6 +103,8 @@ extension NetworkingManager {
     }
 }
 
+//MARK: -
+//MARK: Extension for Alamofire's HTTPRequestType
 fileprivate extension HTTPRequestType {
     /// Converts the request type to an enum value understood by Alamofire
     var toAlamofireMethod: HTTPMethod {
@@ -97,7 +116,7 @@ fileprivate extension HTTPRequestType {
 }
 
 
-
+//MARK: -
 //MARK: Reachability
 fileprivate struct Reachability {
     static var isConnectedToNetwork: Bool {
