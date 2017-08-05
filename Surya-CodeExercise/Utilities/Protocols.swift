@@ -8,6 +8,11 @@
 import UIKit
 
 
+/// A type can become a reusable cell by inplementing a static reuseIdentifier property
+protocol ReusableCell {
+    static var reuseIdentifier: String { get }
+}
+
 /// A ViewController can conform to StoryboardInstantiable to be instantiated from the storyboard using the instantiatedFromStoryboard() method.
 protocol StoryboardInstantiable {
     static var codeExerciseStoryboard: CodeExerciseStoryboards { get }

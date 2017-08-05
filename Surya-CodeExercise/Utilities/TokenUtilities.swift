@@ -9,7 +9,7 @@
 import Foundation
 
 struct EmailTokenManager {
-    static internal var EmailTokenKey = "EmailTokenKey"
+    static private var EmailTokenKey = "EmailTokenKey"
     
     /// A Bool value indicating whether the emailToken is present or not.
     ///

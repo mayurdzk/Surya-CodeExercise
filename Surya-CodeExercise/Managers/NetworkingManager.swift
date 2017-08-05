@@ -13,13 +13,15 @@ import SystemConfiguration
 //MARK: -
 //MARK: NetworkingManager
 struct NetworkingManager{
-    internal let baseURL = "http://surya-interview.appspot.com/"
+    private let baseURL = "http://surya-interview.appspot.com/"
     
     /// Call this method to fetch all items matching the stored email address token.
     ///
     /// - Parameter completionHandler: Your completion handler is called on the main thread once all items are saved to disk
     func fetchAllItems(onCompletion completionHandler: @escaping ((ResultType) -> Void)) {
         let remoteEndPoint = baseURL + "list"
+        //FIXME: Add a guard against no email token being present
+        //FIXME: Add the appropriate POST Body
         networkCall(to: remoteEndPoint, ofType: .post) { (response) in
             switch response.wasSuccess {
             case .success:
@@ -55,7 +57,7 @@ struct NetworkingManager{
     
     //Reviewer's Notes: This abstraction is created so that our dependency on Alamofire reduces. This is the bulk of the code where Alamofire will ever be referenced. This abstraction also makes it easier for enabling dependency injection and writing test for the code.
     
-    internal func networkCall(to urlAsString: String, ofType type: HTTPRequestType, result: @escaping ((JSONResponse) -> Void )) {
+    private func networkCall(to urlAsString: String, ofType type: HTTPRequestType, result: @escaping ((JSONResponse) -> Void )) {
         guard Reachability.isConnectedToNetwork else {
             result(JSONResponse(withFailureReason: .noInternet))
             return
@@ -74,7 +76,7 @@ struct NetworkingManager{
 //MARK: -
 //MARK: JSONResponse Definition
 extension NetworkingManager {
-    internal struct JSONResponse {
+    fileprivate struct JSONResponse {
         var jsonResult: JSON?
         var wasSuccess: ResultType
         

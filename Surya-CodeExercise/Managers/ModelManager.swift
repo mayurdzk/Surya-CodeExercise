@@ -12,7 +12,7 @@ struct ModelManager {
     //Reviewer's Notes: While using the property isDataStoreAvailable in this way means every function defined within ModelManager will have to check the property before beginning operations, using a different approach--such as using a failable initialiser to have this check done just once--has its own pitfalls: 1) the data store may become inaccessible between initialisaion of the struct and accessing a method. 2) The checks will still occur, except they will be passed on to the calling side instead.
     
     /// Use this property to determine whether the underlying data store is available or not
-    internal var isDataStoreAvailable: Bool {
+    private var isDataStoreAvailable: Bool {
         return (try? Realm()) != nil
     }
     

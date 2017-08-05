@@ -35,6 +35,8 @@ class ItemTableViewCell: UITableViewCell {
     }
 }
 
+//MARK: -
+//MARK: ItemViewModel
 struct ItemViewModel {
     let imageURL: URL?
     let name: String
@@ -60,4 +62,10 @@ struct ItemViewModel {
         name = obtainedName
         email = item.emailID
     }
+}
+
+//MARK: -
+//MARK: ReusableCell conformance
+extension ItemTableViewCell: ReusableCell {
+    static let reuseIdentifier = "ItemTableViewCellIdentifier"
 }
