@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		588E3048A4FD534043FD51D8 /* Pods_Surya_CodeExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBC3EC761B22BE5CE6A89DD /* Pods_Surya_CodeExercise.framework */; };
 		772E93871F35B75100EFA7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E93861F35B75100EFA7C6 /* AppDelegate.swift */; };
 		772E93891F35B75100EFA7C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E93881F35B75100EFA7C6 /* ViewController.swift */; };
 		772E938C1F35B75100EFA7C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 772E938A1F35B75100EFA7C6 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19618A066380CEB131723AA1 /* Pods-Surya-CodeExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surya-CodeExercise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Surya-CodeExercise/Pods-Surya-CodeExercise.debug.xcconfig"; sourceTree = "<group>"; };
+		5DBC3EC761B22BE5CE6A89DD /* Pods_Surya_CodeExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Surya_CodeExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		772E93831F35B75100EFA7C6 /* Surya-CodeExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Surya-CodeExercise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		772E93861F35B75100EFA7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		772E93881F35B75100EFA7C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		772E938D1F35B75100EFA7C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		772E93901F35B75100EFA7C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		772E93921F35B75100EFA7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC7039B7C0306C88BC9AE61C /* Pods-Surya-CodeExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surya-CodeExercise.release.xcconfig"; path = "Pods/Target Support Files/Pods-Surya-CodeExercise/Pods-Surya-CodeExercise.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				588E3048A4FD534043FD51D8 /* Pods_Surya_CodeExercise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24952D1E2722690AE0F696A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19618A066380CEB131723AA1 /* Pods-Surya-CodeExercise.debug.xcconfig */,
+				DC7039B7C0306C88BC9AE61C /* Pods-Surya-CodeExercise.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		772E937A1F35B75100EFA7C6 = {
 			isa = PBXGroup;
 			children = (
 				772E93851F35B75100EFA7C6 /* Surya-CodeExercise */,
 				772E93841F35B75100EFA7C6 /* Products */,
+				24952D1E2722690AE0F696A8 /* Pods */,
+				BA1EBA650CF417830C7D6F57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = "Surya-CodeExercise";
 			sourceTree = "<group>";
 		};
+		BA1EBA650CF417830C7D6F57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DBC3EC761B22BE5CE6A89DD /* Pods_Surya_CodeExercise.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 772E93951F35B75100EFA7C6 /* Build configuration list for PBXNativeTarget "Surya-CodeExercise" */;
 			buildPhases = (
+				435CE626AC356D71EA848A4A /* [CP] Check Pods Manifest.lock */,
 				772E937F1F35B75100EFA7C6 /* Sources */,
 				772E93801F35B75100EFA7C6 /* Frameworks */,
 				772E93811F35B75100EFA7C6 /* Resources */,
+				EF7DEC80184AABFAE03FC15E /* [CP] Embed Pods Frameworks */,
+				2397786385CB971FF67E720B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2397786385CB971FF67E720B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Surya-CodeExercise/Pods-Surya-CodeExercise-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		435CE626AC356D71EA848A4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EF7DEC80184AABFAE03FC15E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Surya-CodeExercise/Pods-Surya-CodeExercise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		772E937F1F35B75100EFA7C6 /* Sources */ = {
@@ -210,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -261,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -271,6 +346,7 @@
 		};
 		772E93961F35B75100EFA7C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19618A066380CEB131723AA1 /* Pods-Surya-CodeExercise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FGMG6GZVKT;
@@ -278,13 +354,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mayur.Surya-CodeExercise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		772E93971F35B75100EFA7C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC7039B7C0306C88BC9AE61C /* Pods-Surya-CodeExercise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FGMG6GZVKT;
@@ -292,7 +369,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mayur.Surya-CodeExercise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
