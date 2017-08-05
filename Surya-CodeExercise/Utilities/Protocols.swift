@@ -10,7 +10,7 @@ import UIKit
 
 /// A ViewController can conform to StoryboardInstantiable to be instantiated from the storyboard using the instantiatedFromStoryboard() method.
 protocol StoryboardInstantiable {
-    static var codeExercisetoryboard: CodeExerciseStoryboards { get }
+    static var codeExerciseStoryboard: CodeExerciseStoryboards { get }
     static var sceneIdentifier: String { get }
 }
 
@@ -20,6 +20,6 @@ extension StoryboardInstantiable where Self: UIViewController {
     ///
     /// - Returns:
     static func instantiatedFromStoryboard() -> Self {
-        return UIStoryboard(name: self.codeExercisetoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: self.sceneIdentifier) as! Self
+        return UIStoryboard(name: self.codeExerciseStoryboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: self.sceneIdentifier) as! Self
     }
 }

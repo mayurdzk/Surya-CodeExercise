@@ -14,7 +14,7 @@
         <!--Email Input View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="EmailInputViewController" customModule="Surya_CodeExercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmailInputViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="EmailInputViewController" customModule="Surya_CodeExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
-        <!--View Controller-->
+        <!--Items ListVC-->
         <scene sceneID="q4Z-nD-dXu">
             <objects>
-                <viewController id="Cfa-cQ-phW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ItemsListVC" id="Cfa-cQ-phW" customClass="ItemsListVC" customModule="Surya_CodeExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zdm-LO-aYh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,6 +122,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HiO-aq-VSg"/>
                     </view>
+                    <connections>
+                        <outlet property="itemsTableView" destination="Nbh-Lc-bQh" id="800-h2-4A0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H9N-kb-7vV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

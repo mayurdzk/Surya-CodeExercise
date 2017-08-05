@@ -22,6 +22,7 @@
 		77C070EB1F35D87100B53EDF /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C070EA1F35D87100B53EDF /* ModelManager.swift */; };
 		77C070ED1F35D87D00B53EDF /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C070EC1F35D87D00B53EDF /* NetworkingManager.swift */; };
 		77FD32B11F35E13E001E6CC1 /* TokenUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FD32B01F35E13E001E6CC1 /* TokenUtilities.swift */; };
+		77FD32B31F35FA03001E6CC1 /* ItemsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FD32B21F35FA03001E6CC1 /* ItemsListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		77C070EA1F35D87100B53EDF /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		77C070EC1F35D87D00B53EDF /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		77FD32B01F35E13E001E6CC1 /* TokenUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUtilities.swift; sourceTree = "<group>"; };
+		77FD32B21F35FA03001E6CC1 /* ItemsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListVC.swift; sourceTree = "<group>"; };
 		DC7039B7C0306C88BC9AE61C /* Pods-Surya-CodeExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surya-CodeExercise.release.xcconfig"; path = "Pods/Target Support Files/Pods-Surya-CodeExercise/Pods-Surya-CodeExercise.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				772E93881F35B75100EFA7C6 /* EmailInputVC.swift */,
+				77FD32B21F35FA03001E6CC1 /* ItemsListVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				77FD32B11F35E13E001E6CC1 /* TokenUtilities.swift in Sources */,
 				77C070E71F35D25C00B53EDF /* ItemTableViewCell.swift in Sources */,
 				77C070DF1F35BFFF00B53EDF /* UtilityMethods.swift in Sources */,
+				77FD32B31F35FA03001E6CC1 /* ItemsListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
