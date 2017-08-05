@@ -13,6 +13,8 @@
 		772E938C1F35B75100EFA7C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 772E938A1F35B75100EFA7C6 /* Main.storyboard */; };
 		772E938E1F35B75100EFA7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 772E938D1F35B75100EFA7C6 /* Assets.xcassets */; };
 		772E93911F35B75100EFA7C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 772E938F1F35B75100EFA7C6 /* LaunchScreen.storyboard */; };
+		77C070DD1F35BD3900B53EDF /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C070DC1F35BD3900B53EDF /* ItemModel.swift */; };
+		77C070DF1F35BFFF00B53EDF /* UtilityMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C070DE1F35BFFF00B53EDF /* UtilityMethods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		772E938D1F35B75100EFA7C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		772E93901F35B75100EFA7C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		772E93921F35B75100EFA7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77C070DC1F35BD3900B53EDF /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		77C070DE1F35BFFF00B53EDF /* UtilityMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityMethods.swift; sourceTree = "<group>"; };
 		DC7039B7C0306C88BC9AE61C /* Pods-Surya-CodeExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Surya-CodeExercise.release.xcconfig"; path = "Pods/Target Support Files/Pods-Surya-CodeExercise/Pods-Surya-CodeExercise.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +74,10 @@
 		772E93851F35B75100EFA7C6 /* Surya-CodeExercise */ = {
 			isa = PBXGroup;
 			children = (
+				77C070DB1F35BCF800B53EDF /* ViewControllers */,
+				77C070DA1F35BCD400B53EDF /* Managers */,
+				77C070D91F35BCB900B53EDF /* Networking */,
+				77C070D81F35BCA900B53EDF /* Model Objects */,
 				772E93861F35B75100EFA7C6 /* AppDelegate.swift */,
 				772E93881F35B75100EFA7C6 /* ViewController.swift */,
 				772E938A1F35B75100EFA7C6 /* Main.storyboard */,
@@ -78,6 +86,36 @@
 				772E93921F35B75100EFA7C6 /* Info.plist */,
 			);
 			path = "Surya-CodeExercise";
+			sourceTree = "<group>";
+		};
+		77C070D81F35BCA900B53EDF /* Model Objects */ = {
+			isa = PBXGroup;
+			children = (
+				77C070DC1F35BD3900B53EDF /* ItemModel.swift */,
+			);
+			path = "Model Objects";
+			sourceTree = "<group>";
+		};
+		77C070D91F35BCB900B53EDF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		77C070DA1F35BCD400B53EDF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				77C070DE1F35BFFF00B53EDF /* UtilityMethods.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		77C070DB1F35BCF800B53EDF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		BA1EBA650CF417830C7D6F57 /* Frameworks */ = {
@@ -224,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77C070DD1F35BD3900B53EDF /* ItemModel.swift in Sources */,
 				772E93891F35B75100EFA7C6 /* ViewController.swift in Sources */,
 				772E93871F35B75100EFA7C6 /* AppDelegate.swift in Sources */,
+				77C070DF1F35BFFF00B53EDF /* UtilityMethods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
