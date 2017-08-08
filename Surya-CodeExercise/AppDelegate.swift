@@ -56,6 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let emailInputVC = EmailInputViewController.instantiatedFromStoryboard()
             window.rootViewController = emailInputVC
         }
+        
     }
 }
 
