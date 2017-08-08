@@ -97,15 +97,15 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiE-bq-MrC">
-                                                    <rect key="frame" x="84" y="4" width="271" height="30.5"/>
+                                                    <rect key="frame" x="84" y="4" width="271" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhB-PW-Zbk">
-                                                    <rect key="frame" x="84" y="42.5" width="271" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="92" y="44" width="263" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -114,11 +114,11 @@
                                                 <constraint firstItem="GiE-bq-MrC" firstAttribute="top" secondItem="3aS-JE-7RY" secondAttribute="top" constant="4" id="3Ia-zR-9ai"/>
                                                 <constraint firstItem="GiE-bq-MrC" firstAttribute="leading" secondItem="Vve-WG-B1g" secondAttribute="trailing" constant="20" id="5mM-hx-IQM"/>
                                                 <constraint firstItem="Vve-WG-B1g" firstAttribute="leading" secondItem="3aS-JE-7RY" secondAttribute="leading" constant="4" id="EPf-yp-RxC"/>
-                                                <constraint firstItem="JhB-PW-Zbk" firstAttribute="leading" secondItem="Vve-WG-B1g" secondAttribute="trailing" constant="20" id="IVj-hm-483"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="JhB-PW-Zbk" secondAttribute="trailing" constant="12" id="N4V-gT-ISb"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="JhB-PW-Zbk" secondAttribute="bottom" constant="8" id="T6a-Vl-tVu"/>
                                                 <constraint firstItem="JhB-PW-Zbk" firstAttribute="top" secondItem="GiE-bq-MrC" secondAttribute="bottom" constant="8" id="UGL-QP-5v8"/>
                                                 <constraint firstAttribute="trailing" secondItem="GiE-bq-MrC" secondAttribute="trailing" constant="20" id="Vc8-MG-j0p"/>
+                                                <constraint firstItem="JhB-PW-Zbk" firstAttribute="leading" secondItem="GiE-bq-MrC" secondAttribute="leading" constant="8" id="ybQ-rR-JQV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

@@ -13,6 +13,7 @@ class ItemsListVC: UIViewController {
 
     fileprivate var itemsDataSource = [ItemViewModel]() {
         didSet {
+            setTableViewCellSeperator()
             itemsTableView?.reloadData()
         }
     }
@@ -23,6 +24,9 @@ class ItemsListVC: UIViewController {
         itemsTableView.dataSource = self
         itemsTableView.rowHeight = UITableViewAutomaticDimension
         itemsTableView.estimatedRowHeight = 100
+        itemsTableView.allowsSelection = false
+        setItemsDataSource()
+        setTableViewCellSeperator()
         NetworkingManager().fetchAllItems { [weak self] (result) in
             self?.setItemsDataSource()
         }
@@ -32,6 +36,16 @@ class ItemsListVC: UIViewController {
     func setItemsDataSource() {
         ModelManager().itemsAsViewModels { [weak self] (itemsAsViewModels) in
             self?.itemsDataSource = itemsAsViewModels
+        }
+    }
+    
+    
+    /// Sets the cell seperator style for the itemsTableView based on the data source
+    func setTableViewCellSeperator() {
+        if itemsDataSource.count > 0 {
+            itemsTableView.separatorStyle = .singleLine
+        } else {
+            itemsTableView.separatorStyle = .none
         }
     }
 }

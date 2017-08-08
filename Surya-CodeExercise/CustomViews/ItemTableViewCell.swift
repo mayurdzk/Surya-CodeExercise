@@ -17,6 +17,8 @@ class ItemTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         itemImageView.layer.cornerRadius = itemImageView.frame.height/2
+        itemImageView.clipsToBounds = true
+        itemImageView.contentMode = .scaleAspectFill
     }
     
     
