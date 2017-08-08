@@ -31,20 +31,6 @@ class EmailInputViewController: UIViewController, UserMessageCommunicable {
     }
     
     
-    //MARK: Helper methods
-    /// Returns true if the email string you provided is a valid email address; returns false if not.
-    ///
-    /// - Parameter emailString:
-    /// - Returns:
-    private func verifyEmail(string emailString: String) -> Bool {
-        guard emailString.characters.count > 0 else { return false }
-        
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: emailString)
-    }
-    
-    
     /// Presents an instance of ItemsListVC to the user and dismisses self when ItemsListVC is presented
     private func proceedToItemsList() {
         let itemsListVC = ItemsListVC.instantiatedFromStoryboard()
@@ -61,7 +47,7 @@ class EmailInputViewController: UIViewController, UserMessageCommunicable {
             communicateError(message: emailStringNotEntered)
             return
         }
-        if verifyEmail(string: textFieldText) == false {
+        if Utilities.verifyEmail(string: textFieldText) == false {
             communicateError(message: incorrectEmailString)
             return
         } else {
