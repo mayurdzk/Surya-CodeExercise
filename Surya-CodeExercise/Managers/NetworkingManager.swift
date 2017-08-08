@@ -41,7 +41,6 @@ struct NetworkingManager{
                             items.append(item)
                         }
                     }
-                    
                     let success = ModelManager().save(items: items)
                     if success {
                         completionHandler(.success)

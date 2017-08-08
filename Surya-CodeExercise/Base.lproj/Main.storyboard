@@ -35,9 +35,13 @@
                                     <constraint firstAttribute="height" constant="40" id="REF-zS-4Ma"/>
                                 </constraints>
                                 <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="onGoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9G-m1-FuP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="15E-Mi-Myg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="4Qg-Nz-dFb"/>
                             <constraint firstItem="15E-Mi-Myg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="999" constant="16" id="JjO-el-NQk"/>
@@ -47,9 +51,20 @@
                             <constraint firstItem="15E-Mi-Myg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oVI-YX-bec"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="rho-at-9xX" appends="YES" id="GDo-9l-t2E"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="15E-Mi-Myg" id="p6a-Im-2zA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rho-at-9xX">
+                    <connections>
+                        <action selector="onTapOutsideEmailTextField:" destination="BYZ-38-t0r" id="UGQ-c0-tQj"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
