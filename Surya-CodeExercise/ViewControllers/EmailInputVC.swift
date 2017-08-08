@@ -31,13 +31,10 @@ class EmailInputViewController: UIViewController, UserMessageCommunicable {
     }
     
     
-    /// Presents an instance of ItemsListVC to the user and dismisses self when ItemsListVC is presented
+    /// Presents an instance of ItemsListVC to the user
     private func proceedToItemsList() {
         let itemsListVC = ItemsListVC.instantiatedFromStoryboard()
-        
-        present(itemsListVC, animated: true) {
-            self.dismiss(animated: false, completion: nil)
-        }
+        present(itemsListVC, animated: true, completion: nil)
     }
     
     
