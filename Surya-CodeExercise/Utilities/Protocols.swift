@@ -35,6 +35,16 @@ extension StoryboardInstantiable where Self: UIViewController {
 protocol UserMessageCommunicable{}
 
 extension UserMessageCommunicable where Self: UIViewController{
+    
+    //Reviewer's Notes: These methods aren't extensible--they can't accomodate adding multiple buttons. If this was a requirement, the methods could accept an array of (Button, ButtonClosure) with the default value set to an empty array. Since this wasn't a need I was dealing with, I decided to go with just one button, closure
+    
+    
+    /// Call this method to display a success message to the user. Your message will be displayed to the user along with an actionable button that dismisses the message and (optionally) executes a closure you provide
+    ///
+    /// - Parameters:
+    ///   - messageString: The message you want to convey to the user.
+    ///   - buttonString: The title of the button that will be displayed to the user. The default value of this string is 'O.K.'
+    ///   - closure: A closure that will be executed when the taps the button. By default, the value is nil.
     func communicateSuccess(message messageString: String, withButton buttonString: String = "O.K.", doing closure: (() -> Void)? = nil){
         let alert = UIAlertController(title: "Yay!", message: messageString, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: buttonString, style: .default, handler: { (_) in
@@ -44,6 +54,13 @@ extension UserMessageCommunicable where Self: UIViewController{
         }))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    /// Call this method to display an error message to the user. Your message will be displayed to the user along with an actionable button that dismisses the message and (optionally) executes a closure you provide
+    ///
+    /// - Parameters:
+    ///   - messageString: The message you want to convey to the user.
+    ///   - buttonString: The title of the button that will be displayed to the user. The default value of this string is 'O.K.'
+    ///   - closure: A closure that will be executed when the taps the button. By default, the value is nil.
     func communicateError(message messageString: String, withButton buttonString: String = "O.K.", doing closure: (() -> Void)? = nil){
         let alert = UIAlertController(title: "Oops!", message: messageString, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: buttonString, style: .default, handler: { (_) in
