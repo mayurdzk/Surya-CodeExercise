@@ -19,3 +19,21 @@ extension URL {
         }
     }
 }
+
+extension String {
+    /// Access this property on a String to have it be converted into key-value pairs for JSON
+    var parameterisedForJSON: [String : AnyObject]? {
+        guard let objectData: Data = self.data(using: .utf8) else {
+            crashDebug(with: "Couldn't convert the string to data")
+            return nil
+        }
+        var jsonDict: [String : AnyObject]? = nil
+        do {
+            jsonDict = try JSONSerialization.jsonObject(with: objectData, options: .mutableContainers) as? [String : AnyObject]
+            return jsonDict
+        } catch {
+            crashDebug(with: "JSON serialization failed:  \(error)")
+            return nil
+        }
+    }
+}
