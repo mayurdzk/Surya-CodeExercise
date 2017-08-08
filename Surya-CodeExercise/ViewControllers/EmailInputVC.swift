@@ -24,6 +24,11 @@ class EmailInputViewController: UIViewController, UserMessageCommunicable {
     @IBAction func onGoButton(_ sender: UIButton) {
     }
     
+    
+    /// Returns true if the email string you provided is a valid email address; returns false if not.
+    ///
+    /// - Parameter emailString:
+    /// - Returns:
     private func verifyEmail(string emailString: String) -> Bool {
         guard emailString.characters.count > 0 else { return false }
         
@@ -32,7 +37,9 @@ class EmailInputViewController: UIViewController, UserMessageCommunicable {
         return emailTest.evaluate(with: emailString)
     }
     
-    private func presentItemsList() {
+    
+    /// Presents an instance of ItemsListVC to the user and dismisses self when ItemsListVC is presented
+    private func proceedToItemsList() {
         let itemsListVC = ItemsListVC.instantiatedFromStoryboard()
         
         //FIXME: Verify that this dismissal doesn't cause problems
@@ -41,6 +48,8 @@ class EmailInputViewController: UIViewController, UserMessageCommunicable {
         }
     }
     
+    
+    /// This method communicates an error to the user if the email is incorrect. If it isn't the email is saved and the list view controller is presented to the user
     private func runRoutineOnGo() {
         guard let textFieldText = emailTextField.text else {
             communicateError(message: emailStringNotEntered)
@@ -51,10 +60,12 @@ class EmailInputViewController: UIViewController, UserMessageCommunicable {
             return
         } else {
             EmailTokenManager.save(emailToken: textFieldText)
-            presentItemsList()
+            proceedToItemsList()
         }
     }
 }
+
+//FIXME: Write code to let the user tap the 'Go' button on their keyboard
 
 //MARK: -
 //MARK: StoryboardInstantiable conformance
