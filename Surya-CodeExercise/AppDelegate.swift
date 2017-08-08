@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        configureRootViewController()
         return true
     }
 
@@ -41,6 +42,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    
+    /// Configures the root view controller based on the state of the app--determined by EmailTokenManager's `isEmailTokenPresent` property
+    private func configureRootViewController() {
+        guard let window = window else {
+            crashDebug(with: "The App Delegate doesn't have a winow!?")
+            return
+        }
+        if EmailTokenManager.isEmailTokenPresent {
+            let itemListVC = ItemsListVC.instantiatedFromStoryboard()
+            window.rootViewController = itemListVC
+        } else {
+            let emailInputVC = EmailInputViewController.instantiatedFromStoryboard()
+            window.rootViewController = emailInputVC
+        }
+    }
 }
 
